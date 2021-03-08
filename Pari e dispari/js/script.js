@@ -16,6 +16,7 @@ function randomizer () {
 
 function sumTellEven (num1, num2) {
   var sum = parseInt(num1 + num2);
+  console.log("la somma dei due numeri è " + sum);
   if (sum % 2 == 0) {
     return true;
   }
@@ -38,38 +39,48 @@ while (scelta != "pari" && scelta != "dispari") {
 if (scelta == "pari") {
   scelta = true;
   alert("Hai scelto pari! Il computer dunque sceglierà dispari.");
+  console.log("Hai scelto pari e il computer dispari.");
 }
 
 else {
   scelta = false;
   alert("Hai scelto dispari! Il computer dunque sceglierà pari.");
+  console.log("Hai scelto dispari e il computer pari.");
 }
 
 // Chiedo i numeri all'utente e definisco le variabili del caso.
 // La variabile NumeroComputer è definita tramite il Randomizer.
 
 var numeroUtente = parseInt(prompt("È il momento di giocare: scegli un numero da 1 a 5!"));
+console.log("Il numero che hai scelto è " + numeroUtente);
 var numeroComputer = randomizer();
 alert("Anche il computer gioca ed ha scelto il numero " + numeroComputer);
+console.log("Il numero random del computer è " + numeroComputer)
 
 //Uso la funzione SumTellEven per sommare i numeri e capire se sono pari.
+// Se il risultato finale è pari la variabile Oucome sarà impostata vera; se è dispari, falsa.
 
 alert("Ora il programma sommerà i vostri numeri e vi dirà se il risultato della somma è pari o dispari");
 
 if (sumTellEven(numeroUtente, numeroComputer)) {
-  alert("la somma dei due numeri è pari!")
+  alert("la somma dei due numeri è pari!");
   var outcome = true;
 }
 
 else {
-  alert("la somma dei due numeri è dispari!")
+  alert("la somma dei due numeri è dispari!");
   var outcome = false;
 }
 
+
+//La scelta dell'utente e la variabile Outcome sono comparate; se hanno entrambe lo stesso valore di falsità o verità, l'utente è dichiarato vincitore; in caso contrario, perdente.
+
 if (scelta == outcome) {
-  alert("COMPLIMENTI HAI VINTO!!!")
+  alert("COMPLIMENTI HAI VINTO!!!");
+  console.log("Bravo, hai vinto.");
 }
 
 else {
-  alert("Peccato, hai perso...Sarà per la prossima volta.")
+  alert("Peccato, hai perso...Sarà per la prossima volta.");
+  console.log("Mi dispiace, hai perso.");
 }
