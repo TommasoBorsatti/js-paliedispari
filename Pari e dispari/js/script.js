@@ -50,6 +50,11 @@ else {
 // La variabile NumeroComputer è definita tramite il Randomizer.
 
 var numeroUtente = parseInt(prompt("È il momento di giocare: scegli un numero da 1 a 5!"));
+
+while (isNaN(numeroUtente)) {
+  var numeroUtente = parseInt(prompt("Non scrivere nulla di diverso da un numero!"));
+}
+
 console.log("Il numero che hai scelto è " + numeroUtente);
 var numeroComputer = randomizer();
 alert("Anche il computer gioca ed ha scelto il numero " + numeroComputer);
