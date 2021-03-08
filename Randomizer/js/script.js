@@ -13,9 +13,11 @@ var word = "";
 var reverseWord = "";
 
 function isPalindrome(word) {
+
   for (var i = word.length - 1 ; i >= 0; i--) {
   console.log(word[i]);
   reverseWord += word[i];
+  }
 
   if (word == reverseWord) {
     return true;
@@ -40,10 +42,10 @@ do {
 // in caso contrario, comunica che la parola non è un palindromo con un altro alert:
 
 
-if (isPalindrome(word)) {
+if ( isPalindrome(word) ) {
   alert("La parola che hai scelto è un palindromo!");
 }
 
 else {
-  alert("Non è un palindromo")
+  alert("La parola che hai scritto non è un palindromo");
 }
