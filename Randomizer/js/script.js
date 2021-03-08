@@ -36,11 +36,11 @@ do {
   word = prompt("Inserisci una parola io ti dirò se è un palindromo!").toLowerCase();
 } while (!isNaN(word));
 
+console.log(word);
 
 // invoco la funzione isPalindrome usando come parametro la parola Word inserita;
 // Creo una condizione if che, in caso di verità, comunica il palindroma con un alert;
 // in caso contrario, comunica che la parola non è un palindromo con un altro alert:
-
 
 if ( isPalindrome(word) ) {
   alert("La parola che hai scelto è un palindromo!");
