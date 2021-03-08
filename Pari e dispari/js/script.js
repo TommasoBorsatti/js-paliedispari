@@ -28,12 +28,10 @@ function sumTellEven (num1, num2) {
 // In caso contrario false;
 // se si inserisce un valore diverso da Pari o Dispari, il programma entra in un ciclo while e fa ripetere l inserimento dati.
 
-var scelta = prompt("Forza scegli pari o dispari!");
-scelta = scelta.toLowerCase();
+var scelta = prompt("Forza scegli pari o dispari!").toLowerCase();
 
 while (scelta != "pari" && scelta != "dispari") {
-  var scelta = prompt("Devi scegliere solo pari o dispari!");
-  scelta = scelta.toLowerCase();
+  var scelta = prompt("Devi scegliere solo pari o dispari!").toLowerCase();
 }
 
 if (scelta == "pari") {
@@ -71,7 +69,6 @@ else {
   alert("la somma dei due numeri è dispari!");
   var outcome = false;
 }
-
 
 //La scelta dell'utente e la variabile Outcome sono comparate; se hanno entrambe lo stesso valore di falsità o verità, l'utente è dichiarato vincitore; in caso contrario, perdente.
 
