@@ -51,8 +51,8 @@ else {
 
 var numeroUtente = parseInt(prompt("È il momento di giocare: scegli un numero da 1 a 5!"));
 
-while (isNaN(numeroUtente)) {
-  var numeroUtente = parseInt(prompt("Non scrivere nulla di diverso da un numero!"));
+while (isNaN(numeroUtente) || numeroUtente <= 0 || numeroUtente > 5) {
+  var numeroUtente = parseInt(prompt("Non scrivere nulla di diverso da un numero compreso tra 1 e 5!"));
 }
 
 console.log("Il numero che hai scelto è " + numeroUtente);

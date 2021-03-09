@@ -21,7 +21,7 @@ function isPalindrome(word) {
 
   if (word == reverseWord) {
     return true;
-  }
+  
 
   return false;
 }
